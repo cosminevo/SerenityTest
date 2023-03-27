@@ -18,10 +18,10 @@ public class MyBoardPage extends PageObject {
     @FindBy(className = "list")
     public List<WebElementFacade> boardLists;
 
-    @FindBy(css = "[data-test-id='close-board-delete-board-button']")
+    @FindBy(css = "[data-testid='close-board-delete-board-button']")
     public WebElementFacade deleteBoardButton;
 
-    @FindBy(css = "[data-test-id='close-board-delete-board-confirm-button']")
+    @FindBy(css = "[data-testid='close-board-delete-board-confirm-button']")
     public WebElementFacade confirmBoardDeleteButton;
 
     public boolean myCardDisplayed() {
@@ -34,7 +34,7 @@ public class MyBoardPage extends PageObject {
         for (WebElementFacade element : cardDetailsDiv) {
             if (element.getText().toLowerCase().contains(cardName.toLowerCase())) {
                 (new Actions(getDriver()).dragAndDrop(element, boardLists.get(1))).perform();
-                waitABit(1000);
+//                waitABit(1000);
                 break;
             }
         }

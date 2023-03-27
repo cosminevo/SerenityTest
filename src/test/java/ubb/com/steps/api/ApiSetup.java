@@ -73,7 +73,7 @@ public class ApiSetup extends AbstractApiSteps {
         );
         System.out.println(TrelloConstants.boardsUrl + "/" + userDetails.getBoardId() + "/closed");
         Assert.assertTrue(
-                createResourcePut(
+                updateResource(
                         TrelloConstants.boardsUrl + "/" + userDetails.getBoardId() + "/closed",
                         closeBoard,
                         CreatedCard.class)

@@ -9,7 +9,7 @@ public class TrelloConstants {
     public static String cardsUrl = "https://api.trello.com/1/cards";
     public static String myBoardUrl;
 
-    public static int defaultWait = 2000; //ms
+    public static int defaultWait = 0; //ms
 
 
 

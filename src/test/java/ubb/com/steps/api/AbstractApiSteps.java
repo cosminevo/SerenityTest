@@ -27,7 +27,7 @@ public class AbstractApiSteps extends ScenarioSteps {
                 .extract().as(responseClass);
     }
 
-    protected static <T> T createResourcePut(String path, Object requestBody, Class<T> responseClass) {
+    protected static <T> T updateResource(String path, Object requestBody, Class<T> responseClass) {
         return given().relaxedHTTPSValidation()
                 .contentType("application/json")
                 .body(requestBody)
@@ -35,6 +35,19 @@ public class AbstractApiSteps extends ScenarioSteps {
                 .then()
                 .assertThat().statusCode(anyOf(is(201), is(200), is(302)))
                 .extract().as(responseClass);
+    }
+
+    public static <T> T deleteResource(String path, Class<T> responseClass) {
+        return given().relaxedHTTPSValidation()
+                .contentType("application/json")
+                .when().delete(path)
+                .then()
+                .assertThat().statusCode(anyOf(is(201), is(200), is(302)))
+                .extract().as(responseClass);
+    }
+
+    public void createResource(String path, Object requestBody) {
+        createResource(path, requestBody, Object.class);
     }
 
 }
