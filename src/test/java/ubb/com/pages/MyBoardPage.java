@@ -34,7 +34,6 @@ public class MyBoardPage extends PageObject {
         for (WebElementFacade element : cardDetailsDiv) {
             if (element.getText().toLowerCase().contains(cardName.toLowerCase())) {
                 (new Actions(getDriver()).dragAndDrop(element, boardLists.get(1))).perform();
-//                waitABit(1000);
                 break;
             }
         }

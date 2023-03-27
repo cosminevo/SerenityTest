@@ -17,7 +17,6 @@ public class BoardsPage extends PageObject {
 
     public void selectBoard(String boardName) {
         getDriver().get("https://trello.com/cosminciocan1/boards");
-//        waitABit(1000);
         waitFor(boardList.get(0));
         for (WebElementFacade element : boardList) {
             if (element.getText().toLowerCase().contains(boardName.toLowerCase())) {

@@ -35,7 +35,6 @@ public class LoginPage extends PageObject {
     }
 
     public void clickLoginButton() {
-//        waitABit(1000);
         logInButton.click();
     }
 
@@ -44,7 +43,6 @@ public class LoginPage extends PageObject {
     }
 
     public void clickLoginFirst(){
-//        waitABit(1500);
         waitFor(loginFirstButton);
         clickOn(loginFirstButton);
     }
