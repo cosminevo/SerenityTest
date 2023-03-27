@@ -6,6 +6,7 @@ import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.junit.annotations.Qualifier;
 import net.thucydides.junit.annotations.UseTestDataFrom;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,6 +36,11 @@ public class TrelloDemoTest {
 
     @Steps
     public UiTestSteps user;
+
+    @Before
+    public void maximise(){
+        webdriver.manage().window().maximize();
+    }
 
     @Test
     public void checkTheDragAndDropFunctionality() {
