@@ -9,13 +9,13 @@ import ubb.com.util.TrelloConstants;
 import java.util.List;
 
 public class MyBoardPage extends PageObject {
-    @FindBy(css = "div.list-card-details")
+    @FindBy(css = "[data-testid='card-name']")
     public List<WebElementFacade> cardDetailsDiv;
 
     @FindBy(id = "board")
     public WebElementFacade boardContainer;
 
-    @FindBy(className = "list")
+    @FindBy(css = "[data-testid='list-wrapper']")
     public List<WebElementFacade> boardLists;
 
     @FindBy(css = "[data-testid='close-board-delete-board-button']")
