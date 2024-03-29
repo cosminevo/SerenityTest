@@ -7,6 +7,6 @@ https://github.com/cosminevo/SerenityTest/tree/master/src/test/resources/testdat
 3. Import as a Maven project
 4. Run the TrelloDemoTest class to proper run the test
 
-#Performance Demo
+# Performance Demo
 Keynote from session and example demo can be found in this repo as well: Performance Testing - Evozon.pdf && BlazeDemoEvozon.jmx.
 To view the performance project you need to download JMeter (https://jmeter.apache.org/download_jmeter.cgi)
